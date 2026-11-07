@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpendWise - Expense Tracker</title>
+
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SpendWise</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#add-expense">Add Expense</a>
+            <a href="#transactions">Transactions</a>
+        </div>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home" class="hero">
+
+        <div>
+            <p class="small-title">SMART MONEY MANAGEMENT</p>
+
+            <h1>
+                Track Your Money.<br>
+                Spend It Wisely.
+            </h1>
+
+            <p>
+                Manage your daily expenses and understand
+                where your money goes with SpendWise.
+            </p>
+
+            <button onclick="goToExpense()">
+                Add Expense
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+
+        <h2>Dashboard</h2>
+
+        <div class="summary-container">
+
+            <div class="summary-card">
+                <p>Total Income</p>
+                <h3 id="income">₹0</h3>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Expenses</p>
+                <h3 id="expenses">₹0</h3>
+            </div>
+
+            <div class="summary-card">
+                <p>Balance</p>
+                <h3 id="balance">₹0</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Add Expense -->
+    <section id="add-expense">
+
+        <h2>Add Transaction</h2>
+
+        <div class="form-box">
+
+            <label>Transaction Type</label>
+
+            <select id="type">
+                <option value="expense">Expense</option>
+                <option value="income">Income</option>
+            </select>
+
+
+            <label>Amount</label>
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+            >
+
+
+            <label>Category</label>
+
+            <select id="category">
+
+                <option value="Food">Food</option>
+
+                <option value="Travel">Travel</option>
+
+                <option value="Education">Education</option>
+
+                <option value="Shopping">Shopping</option>
+
+                <option value="Entertainment">
+                    Entertainment
+                </option>
+
+                <option value="Other">Other</option>
+
+            </select>
+
+
+            <label>Description</label>
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Example: Lunch"
+            >
+
+
+            <label>Date</label>
+
+            <input
+                type="date"
+                id="date"
+            >
+
+
+            <button onclick="addTransaction()">
+                Add Transaction
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Transactions -->
+    <section id="transactions">
+
+        <h2>Recent Transactions</h2>
+
+        <div id="transactionList">
+
+            <p class="empty">
+                No transactions yet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Budget -->
+    <section class="budget">
+
+        <h2>Monthly Budget</h2>
+
+        <div class="budget-box">
+
+            <label>Set Budget</label>
+
+            <input
+                type="number"
+                id="budgetInput"
+                placeholder="Example: 5000"
+            >
+
+            <button onclick="setBudget()">
+                Set Budget
+            </button>
+
+            <p id="budgetMessage">
+                Set your monthly budget.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 SpendWise | Personal Expense Tracker
+        </p>
+
+    </footer>
+
+
+    <script type="module" src="/src/script.js"></script>
+
+</body>
+
+</html>

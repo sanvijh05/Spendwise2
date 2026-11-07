@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f5f3ff;
+
+    color: #222;
+}
+
+
+/* Navigation */
+
+nav {
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #6246d9;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #444;
+}
+
+
+.nav-links a:hover {
+    color: #6246d9;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 420px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #eee9ff,
+        #ffffff
+    );
+}
+
+
+.small-title {
+    color: #6246d9;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    color: #666;
+
+    max-width: 600px;
+
+    line-height: 1.6;
+}
+
+
+button {
+    background: #6246d9;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-top: 20px;
+}
+
+
+button:hover {
+    background: #4d35b5;
+}
+
+
+/* Common Sections */
+
+.dashboard,
+#add-expense,
+#transactions,
+.budget {
+    padding: 60px 8%;
+}
+
+
+h2 {
+    margin-bottom: 25px;
+
+    font-size: 30px;
+}
+
+
+/* Dashboard Cards */
+
+.summary-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.summary-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.summary-card p {
+    color: #777;
+}
+
+
+.summary-card h3 {
+    margin-top: 10px;
+
+    font-size: 28px;
+
+    color: #6246d9;
+}
+
+
+/* Form */
+
+.form-box {
+    max-width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.form-box label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+
+    border-color: #6246d9;
+}
+
+
+.form-box button {
+    width: 100%;
+}
+
+
+/* Transactions */
+
+#transactionList {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 800px;
+}
+
+
+.transaction {
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.transaction-info h3 {
+    margin-bottom: 5px;
+}
+
+
+.transaction-info p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.expense {
+    color: #e05252;
+
+    font-weight: bold;
+}
+
+
+.income {
+    color: #27945b;
+
+    font-weight: bold;
+}
+
+
+.delete-btn {
+    background: #e05252;
+
+    padding: 8px 12px;
+
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+.empty {
+    color: #777;
+}
+
+
+/* Budget */
+
+.budget-box {
+    max-width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+
+.budget-box label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+.budget-box input {
+    margin-bottom: 10px;
+}
+
+
+#budgetMessage {
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #21194a;
+
+    color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        gap: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .summary-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .transaction {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
